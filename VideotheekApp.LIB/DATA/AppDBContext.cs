@@ -14,7 +14,7 @@ namespace VideotheekApp.LIB.DATA
 
         public AppDBContext() : this(conn: @"Data Source=DESKTOP-5UDQTSH\SQLEXPRESS;Initial Catalog=Videotheek;Persist Security Info=True;User ID=GertjanVerhelst;Password=Gertjan01")
         {
-
+              
         }
 
         private AppDBContext(string conn): base(conn) { }
