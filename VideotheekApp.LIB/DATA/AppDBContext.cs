@@ -9,7 +9,7 @@ using VideotheekApp.LIB.Entities;
 namespace VideotheekApp.LIB.DATA
 {
     public class AppDBContext : DbContext
-    {
+    { 
         private static AppDBContext _instance;
 
         public AppDBContext() : this(conn: @"Data Source=DESKTOP-5UDQTSH\SQLEXPRESS;Initial Catalog=Videotheek;Persist Security Info=True;User ID=GertjanVerhelst;Password=Gertjan01")
