@@ -1,12 +1,30 @@
-﻿<Window x:Class="VideotheekApp.MainWindow"
+﻿<RibbonWindow x:Class="VideotheekApp.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VideotheekApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="Video Kimar" Height="350" Width="525" WindowStartupLocation="CenterScreen" WindowState="Maximized" Closing="MainScreen_Closing" Icon="Resources/Icons/clapperboard.png">
+    <Grid x:Name="gridNavigation">
+        <Ribbon x:Name="MainRibbon" VerticalAlignment="Top" SelectedIndex="0">
+            <Ribbon.HelpPaneContent>
+                <RibbonButton SmallImageSource="Resources/Icons/info.png"></RibbonButton>
+            </Ribbon.HelpPaneContent>
+            <Ribbon.QuickAccessToolBar>
+                <RibbonQuickAccessToolBar>
+                    <RibbonButton x:Name="Save" SmallImageSource="Resources/Icons/diskette.png"></RibbonButton>
+                    <RibbonSplitButton x:Name="undo" SmallImageSource="Resources/Icons/undo.png">
+                        <RibbonSplitMenuItem Header="Undo 1" />
+                        <RibbonSplitMenuItem Header="Undo 2" />
+                        <RibbonSplitMenuItem Header="Undo 3" />
+                    </RibbonSplitButton>
+                    <RibbonSplitButton x:Name="Redo" SmallImageSource="Resources/Icons/redo.png">
+                        <RibbonSplitMenuItem Header="Redo 1" />
+                        <RibbonSplitMenuItem Header="Redo 2" />
+                    </RibbonSplitButton>
+                </RibbonQuickAccessToolBar>
+            </Ribbon.QuickAccessToolBar>
+        </Ribbon>
     </Grid>
-</Window>
+</RibbonWindow>
