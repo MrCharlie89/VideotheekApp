@@ -22,7 +22,6 @@ namespace VideotheekApp.LIB.DATA
 #region Database sets
 
         public DbSet<Movies> Movies { get; set; }
-        public DbSet<Movies> Movies2 { get; set; }
 #endregion
 
         public static AppDBContext Instance(string ConnectionString = null)
