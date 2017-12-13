@@ -9,28 +9,32 @@ using VideotheekApp.LIB.Entities;
 namespace VideotheekApp.LIB.DATA
 {
     public class AppDBContext : DbContext
-    { 
+    {
+        #region Database sets
+
+        public DbSet<Movies> Movies { get; set; }
+        
+        #endregion
+
+
         private static AppDBContext _instance;
 
-        public AppDBContext() : this(conn: @"Data Source=DESKTOP-5UDQTSH\SQLEXPRESS;Initial Catalog=Videotheek;Persist Security Info=True;User ID=GertjanVerhelst;Password=Gertjan01")
+        public AppDBContext() : base(@"Data Source=DESKTOP-5UDQTSH\SQLEXPRESS;Initial Catalog=Videotheek;Persist Security Info=True;User ID=GertjanVerhelst;Password=Gertjan01") //this(conn: @"Data Source=DESKTOP-5UDQTSH\SQLEXPRESS;Initial Catalog=Videotheek;Persist Security Info=True;User ID=GertjanVerhelst;Password=Gertjan01")
         {
               
         }
 
         private AppDBContext(string conn): base(conn) { }
 
-#region Database sets
 
-        public DbSet<Movies> Movies { get; set; }
-#endregion
 
-        public static AppDBContext Instance(string ConnectionString = null)
+        public static AppDBContext Instance(string conn = null)
         {
             if (_instance == null)
             {
-                if (!string.IsNullOrWhiteSpace(ConnectionString))
+                if (!string.IsNullOrWhiteSpace(conn))
                 {
-                    _instance = new AppDBContext(ConnectionString);
+                    _instance = new AppDBContext(conn);
                 }
             }
             return _instance;

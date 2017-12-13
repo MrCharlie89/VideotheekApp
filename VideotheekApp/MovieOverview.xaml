@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="VideotheekApp.MovieOverview"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:VideotheekApp"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Background="White">
+    <Grid>
+        <Label x:Name="Title" Content="Movie Overview" FontSize="16"></Label>
+        <DataGrid x:Name="dgrdMovies" AutoGenerateColumns="False" CanUserAddRows="False" RowEditEnding="dgrdMovies_RowEditEnding" Margin="0,29,0,0" SelectionChanged="dgrdMovies_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="columnMovieTitle" Width="*" Binding="{Binding Path=Name, UpdateSourceTrigger=PropertyChanged}" Header="Title"></DataGridTextColumn>
+                <DataGridTextColumn x:Name="columnMovieGenre" MinWidth="50" Binding="{Binding Path=Genre, UpdateSourceTrigger=PropertyChanged}" Header="Genre"></DataGridTextColumn>
+                <DataGridTextColumn x:Name="columnPegi" MinWidth="50" Binding="{Binding Path=Pegi}" Header="PEGI"></DataGridTextColumn>
+                <DataGridTextColumn x:Name="columnReserved" MinWidth="50" Binding="{Binding Path=Reserved , UpdateSourceTrigger=PropertyChanged}" Header="Reserved"></DataGridTextColumn>
+                <DataGridTextColumn x:Name="ColumnAvailable" MinWidth="50" Binding="{Binding Path=Available, UpdateSourceTrigger=PropertyChanged}" Header="Available"></DataGridTextColumn>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="btnReserve" Content="Reserve" Click="btnReserve"></Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="btnReturn" Content="Return" Click="btnReturn"></Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

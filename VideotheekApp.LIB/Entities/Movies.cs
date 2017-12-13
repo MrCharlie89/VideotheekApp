@@ -19,23 +19,34 @@ namespace VideotheekApp.LIB.Entities
 
         [Column("Movie_Title")]
         [StringLength(255, ErrorMessage = "The name can maximum have 255 characters.")]
-        [Required(ErrorMessage = "The name is required.")]
-        public string MovieTitle { get; set; }
+        [Required(ErrorMessage = "The name of the movie is required.")]
+        public String MovieTitle { get; set; }
 
         [Column("Genre")]
-        public string Genre { get; set; }
+        public String Genre { get; set; }
 
-        [Column("Year")]
-        public int Year { get; set; }
+        [Column("PEGI")]
+        [Range(1,18)]
+        public int? PEGI { get; set; }
+
+        [Column("Duration")]
+        [Required(ErrorMessage = "The duration of the movie is required")]
+        public int Duration { get; set; }
 
         [Column("Release_Date")]
-        [Required]
+        [Required(ErrorMessage = "The releasedate of the movie is required")]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime ReleaseDate { get; set; }
 
-        [Column("Is_Reserved")]
-        [DisplayName("Is reserved?")]
-        public bool IsReserved { get; set; }
+        [Column("reserved_Amount")]
+        public int ReservedAmount { get; set; }
+
+        [Column("available_Amount")]
+        public int AvailableAmount { get; set; }
+
+        [Column("Movie_Description")]
+        [Required(ErrorMessage = "you must give a description for this movie")]
+        public String Description { get; set; }
 
         public override bool IsNew()
         {

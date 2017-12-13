@@ -25,6 +25,20 @@
                     </RibbonSplitButton>
                 </RibbonQuickAccessToolBar>
             </Ribbon.QuickAccessToolBar>
+            <Ribbon.ApplicationMenu>
+                <RibbonApplicationMenu KeyTip="F">
+                    <RibbonApplicationMenuItem x:Name="RamiManageCurrentAccount" Header="My Account" ImageSource="Resources/Icons/User.png"></RibbonApplicationMenuItem>
+                    <RibbonApplicationMenuItem x:Name="ramiExit" Header="Exit" Click="ramiExit_Click" ImageSource="Resources/Icons/sign-out-option.png"></RibbonApplicationMenuItem>
+                </RibbonApplicationMenu>
+            </Ribbon.ApplicationMenu>
+            <RibbonTab Header="Home" KeyTip="H">
+                <RibbonGroup x:Name="grpMovies" Header="Movies">
+                    <RibbonButton x:Name="btnMovieOverview" Label="Movie overview" Click="btnMovieOverview_Click" SmallImageSource="Resources/Icons/film.png"></RibbonButton>
+                    <RibbonButton x:Name="btnMovieAdd" Label="Add new movie" Click="btnMovieAdd_Click" SmallImageSource="Resources/Icons/plus-button.png"></RibbonButton>
+                </RibbonGroup>
+
+            </RibbonTab>
         </Ribbon>
+        <ContentControl x:Name="mainContent" Margin="10,150,10,10"></ContentControl>
     </Grid>
 </RibbonWindow>

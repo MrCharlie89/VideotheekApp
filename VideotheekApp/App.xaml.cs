@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using VideotheekApp.LIB.DATA;
 
 namespace VideotheekApp
 {
@@ -13,5 +14,6 @@ namespace VideotheekApp
     /// </summary>
     public partial class App : Application
     {
+        AppDBContext ctx = AppDBContext.Instance(System.Configuration.ConfigurationManager.ConnectionStrings["Videotheek"].ConnectionString);
     }
 }

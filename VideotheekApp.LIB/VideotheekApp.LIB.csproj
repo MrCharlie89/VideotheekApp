@@ -38,6 +38,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -56,6 +57,10 @@
     <Compile Include="Migrations\201712110946391_movies.Designer.cs">
       <DependentUpon>201712110946391_movies.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712121749308_videotheek.cs" />
+    <Compile Include="Migrations\201712121749308_videotheek.Designer.cs">
+      <DependentUpon>201712121749308_videotheek.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -66,6 +71,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201712110946391_movies.resx">
       <DependentUpon>201712110946391_movies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712121749308_videotheek.resx">
+      <DependentUpon>201712121749308_videotheek.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
