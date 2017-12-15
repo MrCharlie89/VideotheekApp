@@ -10,15 +10,20 @@ namespace VideotheekApp.LIB.BL
 {
     public class BL_Movies
     {
-        public static bool Save(Movies model)
+       
+        public static bool Save(Movies Model)
         {
             try
             {
-                if (model.IsNew())
-                    Create(model);
+                if (Model.IsNew())
+                {
+                    Model.AvailableAmount = (int)Model.Amount - Model.ReservedAmount;
+                    Create(Model);
+                }
                 else
-                    Update(model);
-
+                {
+                    Update(Model);
+                }
             }
             catch (Exception)
             {
@@ -27,8 +32,6 @@ namespace VideotheekApp.LIB.BL
             }
             return true;
         }
-
-
 
         private static void Create(Movies model)
         {
@@ -55,7 +58,7 @@ namespace VideotheekApp.LIB.BL
                 throw;
             }
         }
-        
+
         public static List<Movies> GetAll()
         {
             try

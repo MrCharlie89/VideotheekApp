@@ -18,25 +18,33 @@ namespace VideotheekApp.LIB.Entities
         public override int Id { get; set; }
 
         [Column("Movie_Title")]
-        [StringLength(255, ErrorMessage = "The name can maximum have 255 characters.")]
-        [Required(ErrorMessage = "The name of the movie is required.")]
+        [StringLength(255)]
+        [Required]
         public String MovieTitle { get; set; }
 
         [Column("Genre")]
+        [Required]
         public String Genre { get; set; }
 
         [Column("PEGI")]
-        [Range(1,18)]
+        [Range(1, 18)]
+        [Required]
         public int? PEGI { get; set; }
 
         [Column("Duration")]
-        [Required(ErrorMessage = "The duration of the movie is required")]
+        [Required]
         public int Duration { get; set; }
 
         [Column("Release_Date")]
-        [Required(ErrorMessage = "The releasedate of the movie is required")]
+        [Required]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime ReleaseDate { get; set; }
+
+        [Column("amount")]
+        [Range(1, 50)]
+        [Required]
+        public int? Amount { get; set; }
+       
 
         [Column("reserved_Amount")]
         public int ReservedAmount { get; set; }
@@ -45,7 +53,7 @@ namespace VideotheekApp.LIB.Entities
         public int AvailableAmount { get; set; }
 
         [Column("Movie_Description")]
-        [Required(ErrorMessage = "you must give a description for this movie")]
+        [Required]
         public String Description { get; set; }
 
         public override bool IsNew()

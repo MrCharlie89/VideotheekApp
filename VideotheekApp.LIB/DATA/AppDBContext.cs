@@ -10,6 +10,8 @@ namespace VideotheekApp.LIB.DATA
 {
     public class AppDBContext : DbContext
     {
+
+        
         #region Database sets
 
         public DbSet<Movies> Movies { get; set; }

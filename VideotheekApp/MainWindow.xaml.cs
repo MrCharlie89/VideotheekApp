@@ -2,6 +2,7 @@
 using System.Windows;
 using System.Windows.Controls.Ribbon;
 using System.ComponentModel;
+using System.Xaml;
 
 
 namespace VideotheekApp
@@ -73,6 +74,7 @@ namespace VideotheekApp
             {
 
                 throw;
+
             }
         }
 

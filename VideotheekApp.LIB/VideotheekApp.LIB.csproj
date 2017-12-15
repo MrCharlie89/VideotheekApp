@@ -61,6 +61,22 @@
     <Compile Include="Migrations\201712121749308_videotheek.Designer.cs">
       <DependentUpon>201712121749308_videotheek.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712131358160_videotheek1.cs" />
+    <Compile Include="Migrations\201712131358160_videotheek1.Designer.cs">
+      <DependentUpon>201712131358160_videotheek1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712151620331_videotheek2.cs" />
+    <Compile Include="Migrations\201712151620331_videotheek2.Designer.cs">
+      <DependentUpon>201712151620331_videotheek2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712151657289_videotheek3.cs" />
+    <Compile Include="Migrations\201712151657289_videotheek3.Designer.cs">
+      <DependentUpon>201712151657289_videotheek3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712151703242_videotheek4.cs" />
+    <Compile Include="Migrations\201712151703242_videotheek4.Designer.cs">
+      <DependentUpon>201712151703242_videotheek4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -74,6 +90,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712121749308_videotheek.resx">
       <DependentUpon>201712121749308_videotheek.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712131358160_videotheek1.resx">
+      <DependentUpon>201712131358160_videotheek1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712151620331_videotheek2.resx">
+      <DependentUpon>201712151620331_videotheek2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712151657289_videotheek3.resx">
+      <DependentUpon>201712151657289_videotheek3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712151703242_videotheek4.resx">
+      <DependentUpon>201712151703242_videotheek4.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

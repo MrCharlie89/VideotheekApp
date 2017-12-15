@@ -59,7 +59,13 @@ namespace VideotheekApp
 
         private void dgrdMovies_RowEditEnding(object sender, DataGridRowEditEndingEventArgs e)
         {
+            DataGridRow _row = e.Row;
+            var _changed = _row.DataContext as Movies;
+            _changed.AvailableAmount = (int)_changed.Amount - _changed.ReservedAmount;
 
+            BL_Movies.Save(_changed);
+
+            BindData();
         }
 
         private void btnReserve(object sender, RoutedEventArgs e)
@@ -87,12 +93,23 @@ namespace VideotheekApp
 
         private void btnReturn(object sender, RoutedEventArgs e)
         {
+            var obj = ((FrameworkElement)sender).DataContext as Movies;
 
+            if (obj.ReservedAmount > 0)
+            {
+                obj.ReservedAmount -= 1;
+                obj.AvailableAmount = (int)obj.Amount - obj.ReservedAmount;
+            }
+
+            BL_Movies.Save(obj);
+            BindData();
         }
 
-        private void dgrdMovies_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void btnDetails(object sender, RoutedEventArgs e)
         {
-
+            var model = ((FrameworkElement)sender).DataContext as Movies;
+            MovieDetails md = new MovieDetails(model);
+            md.Show();
         }
     }
 }
