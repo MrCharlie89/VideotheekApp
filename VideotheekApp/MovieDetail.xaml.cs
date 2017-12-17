@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using VideotheekApp.LIB.Entities;
 using VideotheekApp.LIB.BL;
+using System.Globalization;
 
 namespace VideotheekApp
 {
@@ -41,9 +42,9 @@ namespace VideotheekApp
             txtMovieTitle.Text = Model.Movie_Title;
             txtMovieDescription.Text = Model.Description;
             txtPEGI.Text = Model.PEGI.ToString();
-            txtMovieDuration.Text = Model.Description;
-            txtMovieReleaeDate.Text = Model.ReleaseDate.ToString();
-
+            txtMovieDuration.Text = Model.Duration.ToString();           
+            var dt = Model.ReleaseDate;
+            txtMovieReleaeDate.Text = string.Format("{0:dd/MM/yyyy}", dt);
         }
 
         private void btnClose_Click(object sender, RoutedEventArgs e)

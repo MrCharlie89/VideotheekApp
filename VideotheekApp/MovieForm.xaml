@@ -20,7 +20,7 @@
         <Label x:Name="MovieAmount" Content="Amount:" HorizontalAlignment="Left" Margin="402,332,0,163"></Label>
         <TextBox x:Name="txtMovieAmount" Text="{Binding Path=Model.Amount}" HorizontalAlignment="Left" Margin="462,332,0,163" Width="180"></TextBox>
         <Label x:Name="MovieReleaseDate" Content="Release date:" HorizontalAlignment="Left" Margin="378,395,0,100"></Label>
-        <TextBox x:Name="txtMovieReleaseDate" Text="{Binding Path=Model.ReleaseDate}" HorizontalAlignment="Left" Margin="462,395,0,100" Width="180"></TextBox>
+        <TextBox x:Name="txtMovieReleaseDate" Text="{Binding Path=Model.ReleaseDate,StringFormat={}{0:dd/MM/yyyy},ConverterCulture=nl-BE}" HorizontalAlignment="Left" Margin="462,395,0,100" Width="180"></TextBox>
         <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Click="btnSave_Click" Margin="639,458,0,21" Width="101"></Button>
         <Label x:Name="errMovieTitle" HorizontalAlignment="Left" Margin="110,93,0,398" Width="534" Foreground="Red" VerticalContentAlignment="Center"/>
         <Label x:Name="errMovieDescription" HorizontalAlignment="Left" Foreground="Red" Margin="108,236,0,257" Width="534" VerticalContentAlignment="Center"/>

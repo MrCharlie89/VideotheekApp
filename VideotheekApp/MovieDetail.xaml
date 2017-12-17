@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="MovieDetail" Height="315.759" Width="507.782" WindowStyle="None" WindowStartupLocation="CenterScreen">
     <Grid>
-        <TextBlock x:Name="txtMovieTitle" HorizontalAlignment="Center" Margin="88,32,76,246" Width="336" TextAlignment="Center" ></TextBlock>
-        <TextBlock x:Name="txtMovieDescription" HorizontalAlignment="Center" Margin="88,67,76,149" Width="336" TextAlignment="Center"></TextBlock>
+        <TextBlock x:Name="txtMovieTitle" HorizontalAlignment="Center" Margin="88,39,76,239" Width="336" TextAlignment="Center" FontWeight="Bold" ></TextBlock>
+        <TextBlock x:Name="txtMovieDescription" HorizontalAlignment="Center" Margin="88,85,76,131" Width="336" TextAlignment="Center" TextWrapping="Wrap"></TextBlock>
         <TextBlock x:Name="txtMovieDuration" HorizontalAlignment="Left" Width="71" Margin="80,182,0,106" TextAlignment="Center"></TextBlock>
         <Label x:Name="lblMovieDuration" Content="Duration" HorizontalAlignment="Left" FontSize="16" Margin="80,207,0,66" Width="71" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
         <TextBlock x:Name="txtPEGI" HorizontalAlignment="Left" Width="65" Margin="163,182,0,106" TextAlignment="Center"></TextBlock>
