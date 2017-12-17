@@ -10,12 +10,12 @@
         <Label x:Name="Title" Content="Movie Overview" FontSize="16"></Label>
         <DataGrid x:Name="dgrdMovies" AutoGenerateColumns="False" CanUserAddRows="False" RowEditEnding="dgrdMovies_RowEditEnding" Margin="0,29,0,0">
             <DataGrid.Columns>
-                <DataGridTextColumn x:Name="columnMovieTitle" Width="*" Binding="{Binding Path=Name, UpdateSourceTrigger=PropertyChanged}" Header="Title"></DataGridTextColumn>
+                <DataGridTextColumn x:Name="columnMovieTitle" Width="*" Binding="{Binding Path=Movie_Title, UpdateSourceTrigger=PropertyChanged}" Header="Title"></DataGridTextColumn>
                 <DataGridTextColumn x:Name="columnMovieGenre" MinWidth="50" Binding="{Binding Path=Genre, UpdateSourceTrigger=PropertyChanged}" Header="Genre"></DataGridTextColumn>
-                <DataGridTextColumn x:Name="columnPegi" MinWidth="50" Binding="{Binding Path=Pegi}" Header="PEGI"></DataGridTextColumn>
+                <DataGridTextColumn x:Name="columnPegi" MinWidth="50" Binding="{Binding Path=PEGI}" Header="PEGI"></DataGridTextColumn>
                 <DataGridTextColumn x:Name="columnAmount" MinWidth="50" Binding="{Binding Path=Amount, UpdateSourceTrigger=PropertyChanged}" Header="Amount"></DataGridTextColumn>
-                <DataGridTextColumn x:Name="columnReserved" MinWidth="50" Binding="{Binding Path=Reserved , UpdateSourceTrigger=PropertyChanged}" Header="Reserved" IsReadOnly="True"></DataGridTextColumn>
-                <DataGridTextColumn x:Name="ColumnAvailable" MinWidth="50" Binding="{Binding Path=Available, UpdateSourceTrigger=PropertyChanged}" Header="Available" IsReadOnly="True"></DataGridTextColumn>
+                <DataGridTextColumn x:Name="columnReserved" MinWidth="50" Binding="{Binding Path=ReservedAmount, UpdateSourceTrigger=PropertyChanged}" Header="Reserved" IsReadOnly="True"></DataGridTextColumn>
+                <DataGridTextColumn x:Name="ColumnAvailable" MinWidth="50" Binding="{Binding Path=AvailableAmount, UpdateSourceTrigger=PropertyChanged}" Header="Available" IsReadOnly="True"></DataGridTextColumn>
                 <DataGridTemplateColumn>
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
@@ -36,6 +36,14 @@
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Button x:Name="btnDetails" Content="Details" Click="btnDetails"></Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="btnDelete" Content="Delete" Click="btnDelete"></Button>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>

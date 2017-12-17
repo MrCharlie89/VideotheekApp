@@ -65,6 +65,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="LoginWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -73,11 +77,14 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="LoginWindow.xaml.cs">
+      <DependentUpon>LoginWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="MovieDetails.xaml">
+    <Page Include="MovieDetail.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -91,8 +98,8 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MovieDetails.xaml.cs">
-      <DependentUpon>MovieDetails.xaml</DependentUpon>
+    <Compile Include="MovieDetail.xaml.cs">
+      <DependentUpon>MovieDetail.xaml</DependentUpon>
     </Compile>
     <Compile Include="MovieForm.xaml.cs">
       <DependentUpon>MovieForm.xaml</DependentUpon>
@@ -175,6 +182,13 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Icons\picture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Blockbuster.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\hide.png" />
+    <Resource Include="Resources\Icons\view.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

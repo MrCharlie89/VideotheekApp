@@ -108,8 +108,17 @@ namespace VideotheekApp
         private void btnDetails(object sender, RoutedEventArgs e)
         {
             var model = ((FrameworkElement)sender).DataContext as Movies;
-            MovieDetails md = new MovieDetails(model);
+            MovieDetail md = new MovieDetail(model);
             md.Show();
+        }
+
+        private void btnDelete(object sender, RoutedEventArgs e)
+        {
+            var obj = ((FrameworkElement)sender).DataContext as Movies;
+            if (MessageBox.Show("do you want to delete this movie?", "Delete movie", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            {
+                dataSource.Remove(obj);
+            }
         }
     }
 }

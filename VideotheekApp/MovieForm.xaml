@@ -7,28 +7,28 @@
              mc:Ignorable="d" Background="White">
     <Grid Height="522" Width="773">
         <Label x:Name="Title" Content=" Add new movie" Margin="0,0,670,491"></Label>
-        <Label x:Name="MovieTitle" Content="Movie Title:" HorizontalAlignment="Left" Margin="32,77,0,0" VerticalAlignment="Top" FontSize="12"></Label>
-        <TextBox x:Name="txtMovieTitle" HorizontalAlignment="Left" Margin="108,77,0,419" Width="534"></TextBox>
+        <Label x:Name="MovieTitle" Content="Movie Title:" HorizontalAlignment="Left" Margin="34,62,0,0" VerticalAlignment="Top" FontSize="12"></Label>
+        <TextBox x:Name="txtMovieTitle" HorizontalAlignment="Left" Text="{Binding Path=Model.Movie_Title}" Margin="110,62,0,434" Width="534"></TextBox>
         <Label x:Name="MovieDescription" Content="Description:" HorizontalAlignment="Left" Margin="30,129,0,365"></Label>
-        <TextBox x:Name="txtMovieDescription" HorizontalAlignment="Left" Margin="108,129,0,291" Width="534"></TextBox>
-        <Label x:Name="MovieDuration" Content="Duration:" HorizontalAlignment="Left" Margin="44,256,0,239"></Label>
-        <TextBox x:Name="txtMovieDuration" HorizontalAlignment="Left" Margin="108,256,0,239" Width="100"></TextBox>
-        <Label x:Name="PEGI" Content="PEGI:" HorizontalAlignment="Left" Margin="68,308,0,188"></Label>
-        <TextBox x:Name="txtPEGI" HorizontalAlignment="Left" Margin="110,308,0,192" Width="100"></TextBox>
-        <Label x:Name="MovieGenre" Content="Genre:" HorizontalAlignment="Left" Margin="413,256,0,239"></Label>
-        <TextBox x:Name="txtMovieGenre" HorizontalAlignment="Left" Margin="462,256,0,244" Width="180"></TextBox>
-        <Label x:Name="MovieAmount" Content="Amount:" HorizontalAlignment="Left" Margin="402,318,0,177"></Label>
-        <TextBox x:Name="txtMovieAmount" HorizontalAlignment="Left" Margin="462,318,0,177" Width="180"></TextBox>
-        <Label x:Name="MovieReleaseDate" Content="Release date:" HorizontalAlignment="Left" Margin="378,381,0,114"></Label>
-        <TextBox x:Name="txtMovieReleaseDate" HorizontalAlignment="Left" Margin="462,381,0,114" Width="180"></TextBox>
+        <TextBox x:Name="txtMovieDescription" Text="{Binding Path=Model.Description}" HorizontalAlignment="Left" Margin="108,129,0,291" Width="534"></TextBox>
+        <Label x:Name="MovieDuration" Content="Duration:" HorizontalAlignment="Left" Margin="44,270,0,225"></Label>
+        <TextBox x:Name="txtMovieDuration" Text="{Binding Path=Model.Duration}" HorizontalAlignment="Left" Margin="108,270,0,225" Width="100"></TextBox>
+        <Label x:Name="PEGI" Content="PEGI:" HorizontalAlignment="Left" Margin="66,337,0,159" RenderTransformOrigin="0.595,0.615"></Label>
+        <TextBox x:Name="txtPEGI" Text="{Binding Path=Model.PEGI}" HorizontalAlignment="Left" Margin="110,337,0,163" Width="100"></TextBox>
+        <Label x:Name="MovieGenre" Content="Genre:" HorizontalAlignment="Left" Margin="413,270,0,225"></Label>
+        <TextBox x:Name="txtMovieGenre" HorizontalAlignment="Left" Text="{Binding Path=Model.Genre}" Margin="462,270,0,230" Width="180"></TextBox>
+        <Label x:Name="MovieAmount" Content="Amount:" HorizontalAlignment="Left" Margin="402,332,0,163"></Label>
+        <TextBox x:Name="txtMovieAmount" Text="{Binding Path=Model.Amount}" HorizontalAlignment="Left" Margin="462,332,0,163" Width="180"></TextBox>
+        <Label x:Name="MovieReleaseDate" Content="Release date:" HorizontalAlignment="Left" Margin="378,395,0,100"></Label>
+        <TextBox x:Name="txtMovieReleaseDate" Text="{Binding Path=Model.ReleaseDate}" HorizontalAlignment="Left" Margin="462,395,0,100" Width="180"></TextBox>
         <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Click="btnSave_Click" Margin="639,458,0,21" Width="101"></Button>
-        <Label x:Name="errMovieTitle" HorizontalAlignment="Left" Margin="108,108,0,398" Width="534" Foreground="Red"></Label>
-        <Label x:Name="errMovieDescription" HorizontalAlignment="Left" Foreground="Red" Margin="108,236,0,271" Width="534"></Label>
-        <Label x:Name="errMovieDuration" HorizontalAlignment="Left" Foreground="Red" Margin="110,288,0,219" Width="98"></Label>
-        <Label x:Name="errPEGI" HorizontalAlignment="Left" Foreground="Red"></Label>
-        <Label x:Name="errMovieGenre" HorizontalAlignment="Right" Foreground="Red" Margin="0,285,131,219" Width="180"></Label>
-        <Label x:Name="errMovieAmount" HorizontalAlignment="Left" Foreground="Red" Margin="462,350,0,146" Width="180"></Label>
-        <Label x:Name="errMovieReleaseDate" HorizontalAlignment="Left" Margin="462,413,0,90" Width="180"></Label>
+        <Label x:Name="errMovieTitle" HorizontalAlignment="Left" Margin="110,93,0,398" Width="534" Foreground="Red" VerticalContentAlignment="Center"/>
+        <Label x:Name="errMovieDescription" HorizontalAlignment="Left" Foreground="Red" Margin="108,236,0,257" Width="534" VerticalContentAlignment="Center"/>
+        <Label x:Name="errMovieDuration" HorizontalAlignment="Left" Foreground="Red" Margin="110,302,0,195" Width="280" VerticalContentAlignment="Center"/>
+        <Label x:Name="errPEGI" HorizontalAlignment="Left" Foreground="Red" Width="236" Margin="110,366,0,132" VerticalContentAlignment="Center"/>
+        <Label x:Name="errMovieGenre" HorizontalAlignment="Right" Foreground="Red" Margin="0,299,33,195" Width="278" VerticalContentAlignment="Center"/>
+        <Label x:Name="errMovieAmount" HorizontalAlignment="Left" Foreground="Red" Margin="462,364,0,132" Width="301" VerticalContentAlignment="Center"/>
+        <Label x:Name="errMovieReleaseDate" HorizontalAlignment="Left" Margin="462,427,0,64" Width="301" VerticalContentAlignment="Center"/>
     </Grid>
 
 

@@ -36,6 +36,8 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
@@ -46,6 +48,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BL\BL_Movies.cs" />
@@ -53,6 +56,7 @@
     <Compile Include="DATA\AppDBContext.cs" />
     <Compile Include="Entities\BaseEntity.cs" />
     <Compile Include="Entities\Movies.cs" />
+    <Compile Include="Extensions\ControlExtensions.cs" />
     <Compile Include="Migrations\201712110946391_movies.cs" />
     <Compile Include="Migrations\201712110946391_movies.Designer.cs">
       <DependentUpon>201712110946391_movies.cs</DependentUpon>
@@ -76,6 +80,10 @@
     <Compile Include="Migrations\201712151703242_videotheek4.cs" />
     <Compile Include="Migrations\201712151703242_videotheek4.Designer.cs">
       <DependentUpon>201712151703242_videotheek4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712161911006_videotheek5.cs" />
+    <Compile Include="Migrations\201712161911006_videotheek5.Designer.cs">
+      <DependentUpon>201712161911006_videotheek5.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -102,6 +110,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712151703242_videotheek4.resx">
       <DependentUpon>201712151703242_videotheek4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712161911006_videotheek5.resx">
+      <DependentUpon>201712161911006_videotheek5.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

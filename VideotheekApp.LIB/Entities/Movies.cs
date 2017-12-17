@@ -20,7 +20,7 @@ namespace VideotheekApp.LIB.Entities
         [Column("Movie_Title")]
         [StringLength(255)]
         [Required]
-        public String MovieTitle { get; set; }
+        public String Movie_Title { get; set; }
 
         [Column("Genre")]
         [Required]
@@ -43,8 +43,7 @@ namespace VideotheekApp.LIB.Entities
         [Column("amount")]
         [Range(1, 50)]
         [Required]
-        public int? Amount { get; set; }
-       
+        public int? Amount { get; set; }       
 
         [Column("reserved_Amount")]
         public int ReservedAmount { get; set; }

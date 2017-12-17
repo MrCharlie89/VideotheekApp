@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VideotheekApp"
         mc:Ignorable="d"
-        Title="Video Kimar" Height="350" Width="525" WindowStartupLocation="CenterScreen" WindowState="Maximized" Closing="MainScreen_Closing" Icon="Resources/Icons/clapperboard.png">
+        Title="BlockBuster" Height="350" Width="525" WindowStartupLocation="CenterScreen" WindowState="Maximized" Closing="MainScreen_Closing" Icon="Resources/Icons/clapperboard.png">
     <Grid x:Name="gridNavigation">
         <Ribbon x:Name="MainRibbon" VerticalAlignment="Top" SelectedIndex="0">
             <Ribbon.HelpPaneContent>

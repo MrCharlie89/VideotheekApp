@@ -105,9 +105,7 @@ namespace VideotheekApp
             {
                 errMovieDuration.Content = "you must give the duration of this movie";
                 validating = false;
-            }
-
-          
+            }          
 
             if (txtMovieGenre.Text == "")
             {
@@ -120,7 +118,6 @@ namespace VideotheekApp
                 errMovieReleaseDate.Content = "Give the releasedate of this movie";
                 validating = false;
             }
-
            
             if (txtPEGI.Text != "")
             {
@@ -143,11 +140,12 @@ namespace VideotheekApp
                 }
             }
 
-            if (txtMovieAmount.Text != "")
+            if (txtMovieAmount.Text == "")
             {
 
-                errMovieAmount.Content = "Yoe must give the number of copies for this movie";
+                errMovieAmount.Content = "You must give the number of copies for this movie";
             }
+
         }
        
     }
